@@ -1,0 +1,50 @@
+plugins {
+    id 'scala'
+    id 'application'
+}
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    // Scala 2.13
+    implementation 'org.scala-lang:scala-library:2.13.12'
+
+    // AMPS Client - KEEP EXISTING
+    implementation "com.crankuptheamps:amps-client:5.3.5.0"
+
+    // JSON Processing - ADD THESE
+    implementation "com.typesafe.play:play-json_2.13:2.10.0-RC7"
+    implementation 'com.fasterxml.jackson.core:jackson-databind:2.15.2'
+
+    // Logging - KEEP EXISTING
+    implementation 'ch.qos.logback:logback-classic:1.4.11'
+
+    // Akka - KEEP EXISTING (if you need it)
+    implementation 'com.typesafe.akka:akka-http_2.13:10.5.0'
+    implementation 'com.typesafe.akka:akka-actor-typed_2.13:2.8.0'
+    implementation 'com.typesafe.akka:akka-stream_2.13:2.8.0'
+
+    // Database - KEEP EXISTING (if you need it)
+    implementation 'com.microsoft.sqlserver:mssql-jdbc:12.4.1.jre11'
+
+    //Test
+    testImplementation 'org.scalatest:scalatest_2.13:3.2.17'
+    testImplementation 'junit:junit:4.13.2'
+}
+
+application {
+    mainClass = 'Amps.Subscriber'  // Change this to your main class
+}
+
+java {
+    toolchain {
+        languageVersion = JavaLanguageVersion.of(17)
+    }
+}
+
+// Keep Gradle run alive
+run {
+    standardInput = System.in
+}

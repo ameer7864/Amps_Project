@@ -1,7 +1,7 @@
 package Amps
 
 import com.crankuptheamps.client.Client
-import java.time.LocalDateTime
+import play.api.libs.json._
 
 object FigurationPublisher {
 
@@ -16,9 +16,12 @@ object FigurationPublisher {
 
   def publishFiguratedTrade(data: String): Unit = {
     try {
-      val tradeId = extractTradeId(data)
+      val trade = Json.parse(data).as[Trade]
+      val tradeId = trade.trade_id
 
-      val figuratedData = doFiguration(data)
+      val updatedTrade = trade.copy(status = "FIGURATED")
+
+      val figuratedData = Json.toJson(updatedTrade).toString()
 
       println(s"\nPUBLISHING TRADE $tradeId TO HARISH...")
       ampsClient.publish("figurated", figuratedData)
@@ -28,16 +31,6 @@ object FigurationPublisher {
       case e: Exception =>
         println(s"Publishing failed: ${e.getMessage}")
     }
-  }
-
-  private def doFiguration(data: String): String = {
-    data.replace("\"VALIDATED\"", "\"FIGURATED\"") +
-      s""","figuration_time":"${LocalDateTime.now()}","processed_by":"Ameer""""
-  }
-
-  private def extractTradeId(data: String): String = {
-    val pattern = """"trade_id":(\d+)""".r
-    pattern.findFirstMatchIn(data).map(_.group(1)).getOrElse("UNKNOWN")
   }
 
   def disconnect(): Unit = {

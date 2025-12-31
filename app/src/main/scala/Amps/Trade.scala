@@ -1,5 +1,7 @@
 package Amps
 
+import play.api.libs.json._
+
 case class Trade(
                   trade_id: Int,
                   order_id: String,
@@ -20,3 +22,7 @@ case class Trade(
                   received_time: String,
                   status: String
                 )
+
+object Trade {
+  implicit val format: OFormat[Trade] = Json.format[Trade]
+}

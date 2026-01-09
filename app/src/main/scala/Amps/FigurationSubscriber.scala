@@ -4,49 +4,97 @@ import com.crankuptheamps.client.{Client, Command, Message, MessageHandler}
 
 object FigurationSubscriber {
 
+  // Simple flag to control scheduler
+  private var isProcessingTrade = false
+
   @throws[Exception]
   def main(args: Array[String]): Unit = {
 
     println("=" * 60)
-    println("AMEER'S FIGURATION SERVICE")
+    println("AMEER'S FIGURATION SERVICE WITH SMART SCHEDULER")
     println("=" * 60)
-    println("1. Connecting FigurationPublisher...")
+
+    println("This service:")
+    println("1. Listens to AMPS for real-time trades")
+    println("2. Scheduler STOPS during publishing")
+    println("3. Does NOT touch database")
+    println("=" * 60)
+
+    println("\n1. Connecting FigurationPublisher...")
     FigurationPublisher.connect()
 
     println("\n2. Connecting FigurationSubscriber...")
     val client = new Client("FigurationSubscriber")
-    client.connect("tcp://192.168.20.122:9007/amps/json")
+    client.connect("tcp://192.168.20.60:9007/amps/json")
     client.logon()
     println("FigurationSubscriber connected!")
 
+    // Start scheduler that actually stops during publishing
+    startSmartScheduler()
+
+    // Subscribe to real-time AMPS messages
+    subscribeToRealTime(client)
+
+    // Keep program alive
+    Thread.sleep(Long.MaxValue)
+  }
+
+  def startSmartScheduler(): Unit = {
+    new Thread(() => {
+      var checkCount = 0
+      while (true) {
+        // Only run if NOT processing a trade
+        if (!isProcessingTrade) {
+          checkCount += 1
+          println(s"\n[SCHEDULER] Check #$checkCount at ${java.time.LocalDateTime.now()}")
+          println("[SCHEDULER] No trades processing...")
+          println("[SCHEDULER] Sleeping for 10 seconds...")
+          Thread.sleep(10000)
+        } else {
+          // If processing, wait briefly and check again
+          Thread.sleep(100)
+        }
+      }
+    }).start()
+
+    println("\n3. Smart scheduler started!")
+    println("Will STOP during trade processing")
+    println("Resumes after publishing completes")
+  }
+
+  def subscribeToRealTime(client: Client): Unit = {
     val handler = new MessageHandler() {
       override def invoke(msg: Message): Unit = {
+        // STOP the scheduler
+        isProcessingTrade = true
+
         println("\n" + "=" * 50)
-        println("RECEIVED FROM SRIMANTH:")
+        println("REAL-TIME TRADE RECEIVED FROM AMPS:")
         println("Topic: " + msg.getTopic)
         val data = msg.getData
-        println("Data: " + data)
+
+        println("Processing trade...")
+        println("SCHEDULER: STOPPED")  // ← Confirm scheduler stopped
         println("-" * 50)
 
-        println("Calling FigurationPublisher to process and send to Harish...")
-        FigurationPublisher.publishFiguratedTrade(data)
+        try {
+          println("Calling FigurationPublisher to process and send...")
+          FigurationPublisher.publishFiguratedTrade(data)
+        } finally {
+          // RESTART the scheduler
+          isProcessingTrade = false
+          println("\nSCHEDULER: RESUMING")  // ← Confirm scheduler restarted
+        }
 
         println("=" * 50 + "\n")
       }
     }
 
-    println("\nSubscribing to 'validated' topic...")
-    println("Will auto-call FigurationPublisher for each trade")
+    println("\n4. Subscribing to 'trades.validated' topic...")
+    println("Scheduler will STOP during publishing")
     println("Waiting for messages...\n")
 
-    val cmd = new Command("subscribe").setTopic("validated")
+    val cmd = new Command("subscribe").setTopic("trades.validated")
     client.executeAsync(cmd, handler)
-
-    Thread.sleep(300000)
-
-    println("\nStopping...")
-    client.close()
-    FigurationPublisher.disconnect()
-    println("Service stopped.")
   }
 }

@@ -3,11 +3,8 @@ package Amps
 import com.crankuptheamps.client.{Client, Command, Message, MessageHandler}
 
 object FigurationSubscriber {
-
-  // Simple flag to control scheduler
   private var isProcessingTrade = false
 
-  @throws[Exception]
   def main(args: Array[String]): Unit = {
 
     println("=" * 60)
@@ -29,13 +26,10 @@ object FigurationSubscriber {
     client.logon()
     println("FigurationSubscriber connected!")
 
-    // Start scheduler that actually stops during publishing
     startSmartScheduler()
 
-    // Subscribe to real-time AMPS messages
     subscribeToRealTime(client)
 
-    // Keep program alive
     Thread.sleep(Long.MaxValue)
   }
 
@@ -43,7 +37,6 @@ object FigurationSubscriber {
     new Thread(() => {
       var checkCount = 0
       while (true) {
-        // Only run if NOT processing a trade
         if (!isProcessingTrade) {
           checkCount += 1
           println(s"\n[SCHEDULER] Check #$checkCount at ${java.time.LocalDateTime.now()}")
@@ -51,7 +44,6 @@ object FigurationSubscriber {
           println("[SCHEDULER] Sleeping for 10 seconds...")
           Thread.sleep(10000)
         } else {
-          // If processing, wait briefly and check again
           Thread.sleep(100)
         }
       }
@@ -65,7 +57,6 @@ object FigurationSubscriber {
   def subscribeToRealTime(client: Client): Unit = {
     val handler = new MessageHandler() {
       override def invoke(msg: Message): Unit = {
-        // STOP the scheduler
         isProcessingTrade = true
 
         println("\n" + "=" * 50)
@@ -74,7 +65,7 @@ object FigurationSubscriber {
         val data = msg.getData
 
         println("Processing trade...")
-        println("SCHEDULER: STOPPED")  // ← Confirm scheduler stopped
+        println("SCHEDULER: STOPPED")
         println("-" * 50)
 
         try {
@@ -83,7 +74,7 @@ object FigurationSubscriber {
         } finally {
           // RESTART the scheduler
           isProcessingTrade = false
-          println("\nSCHEDULER: RESUMING")  // ← Confirm scheduler restarted
+          println("\nSCHEDULER: RESUMING")
         }
 
         println("=" * 50 + "\n")

@@ -3,9 +3,9 @@ package Amps.steps
 import io.cucumber.scala.{EN, ScalaDsl}
 import play.api.libs.json._
 import Amps.Trade
-import org.scalatest.Assertions._
+import org.scalatest.matchers.should.Matchers
 
-class AllSteps extends ScalaDsl with EN {
+class AllSteps extends ScalaDsl with EN with Matchers {
 
   private var tradeJson: String = _
   private var trade: Trade = _
@@ -47,18 +47,18 @@ class AllSteps extends ScalaDsl with EN {
   }
 
   Then("trade ID should be {int}") { (expectedId: Int) =>
-    assert(trade.trade_id == expectedId)
-    println(s"[TEST] Trade ID is $expectedId")
+    trade.trade_id should be (expectedId)
+    println(s"[TEST] ✓ Trade ID is $expectedId")
   }
 
   Then("symbol should be {string}") { (expectedSymbol: String) =>
-    assert(trade.symbol == expectedSymbol)
-    println(s"[TEST] Symbol is $expectedSymbol")
+    trade.symbol should be (expectedSymbol)
+    println(s"[TEST] ✓ Symbol is $expectedSymbol")
   }
 
   Then("status should be {string}") { (expectedStatus: String) =>
-    assert(trade.status == expectedStatus)
-    println(s"[TEST] Status is $expectedStatus")
+    trade.status should be (expectedStatus)
+    println(s"[TEST] ✓ Status is $expectedStatus")
   }
 
   // ===== FigurationPublisher.scala Tests =====
@@ -75,18 +75,18 @@ class AllSteps extends ScalaDsl with EN {
   }
 
   Then("it should be valid") { () =>
-    assert(isValid)
-    println("[TEST] Trade is valid")
+    isValid should be (true)
+    println("[TEST] ✓ Trade is valid")
   }
 
   Then("it should be invalid") { () =>
-    assert(!isValid)
-    println("[TEST] Trade is invalid")
+    isValid should be (false)
+    println("[TEST] ✓ Trade is invalid")
   }
 
   Then("new status should be {string}") { (expectedStatus: String) =>
-    assert(newStatus == expectedStatus)
-    println(s"[TEST] New status is $expectedStatus")
+    newStatus should be (expectedStatus)
+    println(s"[TEST] ✓ New status is $expectedStatus")
   }
 
   // ===== FigurationSubscriber.scala Tests =====
@@ -115,12 +115,12 @@ class AllSteps extends ScalaDsl with EN {
   }
 
   Then("scheduler should stop") { () =>
-    assert(!isSchedulerRunning)
-    println("[TEST] Scheduler stopped")
+    isSchedulerRunning should be (false)
+    println("[TEST] ✓ Scheduler stopped")
   }
 
   Then("scheduler should resume") { () =>
-    assert(isSchedulerRunning)
-    println("[TEST] Scheduler resumed")
+    isSchedulerRunning should be (true)
+    println("[TEST] ✓ Scheduler resumed")
   }
 }

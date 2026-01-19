@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="aa61e290-245e-4733-9222-685b9451279f" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/app/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/test/scala/org/example/AppSuite.scala" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ExternalProjectsData">
+    <projectState path="$PROJECT_DIR$">
+      <ProjectState />
+    </projectState>
+  </component>
+  <component name="ExternalProjectsManager">
+    <system id="GRADLE">
+      <state>
+        <projects_view>
+          <tree_state>
+            <expand>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="AmpsTrading" type="f1a62948:ProjectNode" />
+              </path>
+            </expand>
+            <select />
+          </tree_state>
+        </projects_view>
+      </state>
+    </system>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="HTML File" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectCodeStyleSettingsMigration">
+    <option name="version" value="2" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 0
+}</component>
+  <component name="ProjectId" id="36yLTPrXiZu2JYYKGGY4DQMJbSi" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="1" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "DefaultHtmlFileTemplate": "HTML File",
+    "Gradle.AllTestsRunner.executor": "Run",
+    "Gradle.AmpsTrading [:app:Amps.FigurationSchedularSubscriber2.main()].executor": "Run",
+    "Gradle.AmpsTrading [:app:Amps.FigurationSubscriber.main()].executor": "Run",
+    "Gradle.AmpsTrading [:app:Amps.SimpleSubscriber.main()].executor": "Run",
+    "Gradle.AmpsTrading [:app:Amps.Subscriber.main()].executor": "Run",
+    "Gradle.AmpsTrading [:app:demo.Publisher.main()].executor": "Run",
+    "Gradle.AmpsTrading [:app:demo.Subscriber.main()].executor": "Run",
+    "Gradle.AmpsTrading [:app:org.example.Main.main()].executor": "Run",
+    "Gradle.AmpsTrading [:app:org.example.Sample.main()].executor": "Run",
+    "Gradle.AmpsTrading [:app:org.example.SimpleDatabase.main()].executor": "Run",
+    "Gradle.AmpsTrading [:app:org.example.SimpleFrontEnd.main()].executor": "Run",
+    "Gradle.AmpsTrading.executor": "Run",
+    "Gradle.AppSuite.executor": "Run",
+    "Gradle.Build AmpsTrading.executor": "Run",
+    "Gradle.CucumberRunner.executor": "Run",
+    "Gradle.CucumberTest.executor": "Run",
+    "Gradle.Download Sources.executor": "Run",
+    "Gradle.RunCukes.executor": "Run",
+    "Gradle.Runner.executor": "Run",
+    "Gradle.SimpleJUnitTest.executor": "Run",
+    "Gradle.SimpleTest.executor": "Run",
+    "Gradle.TestOne.executor": "Run",
+    "JUnit.RunCukes.executor": "Run",
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1": "true",
+    "ignore.virus.scanning.warn.message": "true",
+    "junie.onboarding.icon.badge.shown": "true",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/scala programs/AmpsTrading",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.0",
+    "settings.editor.selected.configurable": "preferences.pluginManager",
+    "to.speed.mode.migration.done": "true"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\scala programs\AmpsTrading\app\src\test\resources\features" />
+    </key>
+  </component>
+  <component name="RunManager" selected="JUnit.AllTestsRunner">
+    <configuration name="AllTestsRunner" type="JUnit" factoryName="JUnit">
+      <module name="AmpsTrading.app.test" />
+      <option name="PACKAGE_NAME" value="Amps" />
+      <option name="MAIN_CLASS_NAME" value="Amps.AllTestsRunner" />
+      <option name="METHOD_NAME" value="" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="RunCukes" type="JUnit" factoryName="JUnit">
+      <module name="AmpsTrading.app.test" />
+      <option name="PACKAGE_NAME" value="Amps" />
+      <option name="MAIN_CLASS_NAME" value="Amps.RunCukes" />
+      <option name="METHOD_NAME" value="" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="JetRunConfigurationType">
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
+      <option name="filePath" />
+      <method v="2" />
+    </configuration>
+    <list>
+      <item itemvalue="JUnit.RunCukes" />
+      <item itemvalue="JUnit.AllTestsRunner" />
+    </list>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-jdk-30f59d01ecdd-cffe25b9f5b3-intellij.indexing.shared.core-IU-253.28294.334" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="aa61e290-245e-4733-9222-685b9451279f" name="Changes" comment="" />
+      <created>1765973871739</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1765973871739</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="UnknownFeatures">
+    <option featureType="com.intellij.fileTypeFactory" implementationName="*.feature" />
+    <option featureType="com.intellij.fileTypeFactory" implementationName="*.conf" />
+  </component>
+</project>

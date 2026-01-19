@@ -61,14 +61,12 @@ class AllSteps extends ScalaDsl with EN with Matchers {
     println(s"[TEST] ✓ Status is $expectedStatus")
   }
 
-  // ===== FigurationPublisher.scala Tests =====
   Given("a trade with status {string}") { (status: String) =>
     tradeStatus = status
     println(s"[TEST] Trade status is '$tradeStatus'")
   }
 
   When("publisher checks if valid") { () =>
-    // Your actual logic from FigurationPublisher
     isValid = tradeStatus == "VALIDATED" || tradeStatus.contains("VALID")
     newStatus = if (isValid) "FIGURATED" else "FIGURATION_SKIPPED"
     println(s"[TEST] Valid? $isValid → New status: $newStatus")
@@ -76,20 +74,19 @@ class AllSteps extends ScalaDsl with EN with Matchers {
 
   Then("it should be valid") { () =>
     isValid should be (true)
-    println("[TEST] ✓ Trade is valid")
+    println("[TEST] Trade is valid")
   }
 
   Then("it should be invalid") { () =>
     isValid should be (false)
-    println("[TEST] ✓ Trade is invalid")
+    println("[TEST] Trade is invalid")
   }
 
   Then("new status should be {string}") { (expectedStatus: String) =>
     newStatus should be (expectedStatus)
-    println(s"[TEST] ✓ New status is $expectedStatus")
+    println(s"[TEST] New status is $expectedStatus")
   }
 
-  // ===== FigurationSubscriber.scala Tests =====
   Given("scheduler is running") { () =>
     isSchedulerRunning = true
     isProcessingTrade = false
@@ -116,11 +113,11 @@ class AllSteps extends ScalaDsl with EN with Matchers {
 
   Then("scheduler should stop") { () =>
     isSchedulerRunning should be (false)
-    println("[TEST] ✓ Scheduler stopped")
+    println("[TEST] Scheduler stopped")
   }
 
   Then("scheduler should resume") { () =>
     isSchedulerRunning should be (true)
-    println("[TEST] ✓ Scheduler resumed")
+    println("[TEST] Scheduler resumed")
   }
 }

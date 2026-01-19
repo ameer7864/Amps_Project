@@ -5,18 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="aa61e290-245e-4733-9222-685b9451279f" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/app/build.gradle" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/test/resources/features/all_tests.feature" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/test/resources/features/all_tests.feature" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/test/resources/features/publisher_logic.feature" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/test/resources/features/scheduler.feature" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/test/resources/features/trade_json.feature" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/test/scala/Amps/RunCukes.scala" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/test/scala/Amps/steps/AllSteps.scala" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/test/scala/Amps/steps/AllSteps.scala" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/test/scala/Amps/steps/PublisherSteps.scala" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/test/scala/Amps/steps/SubscriberSteps.scala" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/test/scala/Amps/steps/TradeSteps.scala" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -66,50 +56,50 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Cucumber Java.Feature: all_tests.executor": "Run",
-    "DefaultHtmlFileTemplate": "HTML File",
-    "Gradle.AllTestsRunner.executor": "Run",
-    "Gradle.AmpsTrading [:app:Amps.FigurationSchedularSubscriber2.main()].executor": "Run",
-    "Gradle.AmpsTrading [:app:Amps.FigurationSubscriber.main()].executor": "Run",
-    "Gradle.AmpsTrading [:app:Amps.SimpleSubscriber.main()].executor": "Run",
-    "Gradle.AmpsTrading [:app:Amps.Subscriber.main()].executor": "Run",
-    "Gradle.AmpsTrading [:app:demo.Publisher.main()].executor": "Run",
-    "Gradle.AmpsTrading [:app:demo.Subscriber.main()].executor": "Run",
-    "Gradle.AmpsTrading [:app:org.example.Main.main()].executor": "Run",
-    "Gradle.AmpsTrading [:app:org.example.Sample.main()].executor": "Run",
-    "Gradle.AmpsTrading [:app:org.example.SimpleDatabase.main()].executor": "Run",
-    "Gradle.AmpsTrading [:app:org.example.SimpleFrontEnd.main()].executor": "Run",
-    "Gradle.AmpsTrading.executor": "Run",
-    "Gradle.AppSuite.executor": "Run",
-    "Gradle.Build AmpsTrading.executor": "Run",
-    "Gradle.CucumberRunner.executor": "Run",
-    "Gradle.CucumberTest.executor": "Run",
-    "Gradle.Download Sources.executor": "Run",
-    "Gradle.RunCukes.executor": "Run",
-    "Gradle.Runner.executor": "Run",
-    "Gradle.SimpleJUnitTest.executor": "Run",
-    "Gradle.SimpleTest.executor": "Run",
-    "Gradle.TestOne.executor": "Run",
-    "JUnit.AllTestsRunner.executor": "Run",
-    "JUnit.RunCukes.executor": "Run",
-    "ModuleVcsDetector.initialDetectionPerformed": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1": "true",
-    "ignore.virus.scanning.warn.message": "true",
-    "junie.onboarding.icon.badge.shown": "true",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/scala programs/AmpsTrading",
-    "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.0",
-    "settings.editor.selected.configurable": "preferences.pluginManager",
-    "to.speed.mode.migration.done": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Cucumber Java.Feature: all_tests.executor&quot;: &quot;Run&quot;,
+    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
+    &quot;Gradle.AllTestsRunner.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.AmpsTrading [:app:Amps.FigurationSchedularSubscriber2.main()].executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.AmpsTrading [:app:Amps.FigurationSubscriber.main()].executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.AmpsTrading [:app:Amps.SimpleSubscriber.main()].executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.AmpsTrading [:app:Amps.Subscriber.main()].executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.AmpsTrading [:app:demo.Publisher.main()].executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.AmpsTrading [:app:demo.Subscriber.main()].executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.AmpsTrading [:app:org.example.Main.main()].executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.AmpsTrading [:app:org.example.Sample.main()].executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.AmpsTrading [:app:org.example.SimpleDatabase.main()].executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.AmpsTrading [:app:org.example.SimpleFrontEnd.main()].executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.AmpsTrading.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.AppSuite.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.Build AmpsTrading.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.CucumberRunner.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.CucumberTest.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.Download Sources.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.RunCukes.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.Runner.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.SimpleJUnitTest.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.SimpleTest.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.TestOne.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.AllTestsRunner.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.RunCukes.executor&quot;: &quot;Run&quot;,
+    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1&quot;: &quot;true&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;junie.onboarding.icon.badge.shown&quot;: &quot;true&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/scala programs/AmpsTrading&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
+    &quot;to.speed.mode.migration.done&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\scala programs\AmpsTrading\app\src\test\resources\features" />

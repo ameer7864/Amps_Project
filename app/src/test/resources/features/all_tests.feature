@@ -6,7 +6,6 @@ Feature: All AMPS Trading Tests
     And symbol should be "AAPL"
     And status should be "VALIDATED"
 
-  # Test FigurationPublisher.scala
   Scenario: Valid trade becomes FIGURATED
     Given a trade with status "VALIDATED"
     When publisher checks if valid
@@ -19,7 +18,6 @@ Feature: All AMPS Trading Tests
     Then it should be invalid
     And new status should be "FIGURATION_SKIPPED"
 
-  # Test FigurationSubscriber.scala
   Scenario: Scheduler stops on trade arrival
     Given scheduler is running
     When trade is received

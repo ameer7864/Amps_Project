@@ -7,7 +7,6 @@ import org.scalatest.Assertions._
 
 class AllSteps extends ScalaDsl with EN {
 
-  // Variables for all tests
   private var tradeJson: String = _
   private var trade: Trade = _
   private var tradeStatus: String = _
@@ -16,7 +15,6 @@ class AllSteps extends ScalaDsl with EN {
   private var isSchedulerRunning: Boolean = _
   private var isProcessingTrade: Boolean = _
 
-  // ===== Trade.scala Tests =====
   Given("I have a valid trade JSON") { () =>
     tradeJson = """
     {
@@ -50,17 +48,17 @@ class AllSteps extends ScalaDsl with EN {
 
   Then("trade ID should be {int}") { (expectedId: Int) =>
     assert(trade.trade_id == expectedId)
-    println(s"[TEST] ✓ Trade ID is $expectedId")
+    println(s"[TEST] Trade ID is $expectedId")
   }
 
   Then("symbol should be {string}") { (expectedSymbol: String) =>
     assert(trade.symbol == expectedSymbol)
-    println(s"[TEST] ✓ Symbol is $expectedSymbol")
+    println(s"[TEST] Symbol is $expectedSymbol")
   }
 
   Then("status should be {string}") { (expectedStatus: String) =>
     assert(trade.status == expectedStatus)
-    println(s"[TEST] ✓ Status is $expectedStatus")
+    println(s"[TEST] Status is $expectedStatus")
   }
 
   // ===== FigurationPublisher.scala Tests =====
@@ -78,17 +76,17 @@ class AllSteps extends ScalaDsl with EN {
 
   Then("it should be valid") { () =>
     assert(isValid)
-    println("[TEST] ✓ Trade is valid")
+    println("[TEST] Trade is valid")
   }
 
   Then("it should be invalid") { () =>
     assert(!isValid)
-    println("[TEST] ✓ Trade is invalid")
+    println("[TEST] Trade is invalid")
   }
 
   Then("new status should be {string}") { (expectedStatus: String) =>
     assert(newStatus == expectedStatus)
-    println(s"[TEST] ✓ New status is $expectedStatus")
+    println(s"[TEST] New status is $expectedStatus")
   }
 
   // ===== FigurationSubscriber.scala Tests =====
@@ -118,11 +116,11 @@ class AllSteps extends ScalaDsl with EN {
 
   Then("scheduler should stop") { () =>
     assert(!isSchedulerRunning)
-    println("[TEST] ✓ Scheduler stopped")
+    println("[TEST] Scheduler stopped")
   }
 
   Then("scheduler should resume") { () =>
     assert(isSchedulerRunning)
-    println("[TEST] ✓ Scheduler resumed")
+    println("[TEST] Scheduler resumed")
   }
 }

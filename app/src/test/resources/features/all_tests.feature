@@ -1,6 +1,4 @@
 Feature: All AMPS Trading Tests
-
-  # Test Trade.scala
   Scenario: Parse trade JSON
     Given I have a valid trade JSON
     When I parse it to Trade object

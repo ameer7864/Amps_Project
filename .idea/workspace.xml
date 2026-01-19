@@ -5,13 +5,18 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="aa61e290-245e-4733-9222-685b9451279f" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/app/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/test/scala/org/example/AppSuite.scala" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/test/resources/features/all_tests.feature" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/test/resources/features/all_tests.feature" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/test/resources/features/publisher_logic.feature" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/test/resources/features/scheduler.feature" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/test/resources/features/trade_json.feature" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/test/scala/Amps/RunCukes.scala" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/test/scala/Amps/steps/AllSteps.scala" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/test/scala/Amps/steps/AllSteps.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/test/scala/Amps/steps/PublisherSteps.scala" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/test/scala/Amps/steps/SubscriberSteps.scala" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/test/scala/Amps/steps/TradeSteps.scala" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -63,6 +68,7 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "Cucumber Java.Feature: all_tests.executor": "Run",
     "DefaultHtmlFileTemplate": "HTML File",
     "Gradle.AllTestsRunner.executor": "Run",
     "Gradle.AmpsTrading [:app:Amps.FigurationSchedularSubscriber2.main()].executor": "Run",
@@ -86,6 +92,7 @@
     "Gradle.SimpleJUnitTest.executor": "Run",
     "Gradle.SimpleTest.executor": "Run",
     "Gradle.TestOne.executor": "Run",
+    "JUnit.AllTestsRunner.executor": "Run",
     "JUnit.RunCukes.executor": "Run",
     "ModuleVcsDetector.initialDetectionPerformed": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
@@ -108,21 +115,11 @@
       <recent name="C:\scala programs\AmpsTrading\app\src\test\resources\features" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.AllTestsRunner">
+  <component name="RunManager">
     <configuration name="AllTestsRunner" type="JUnit" factoryName="JUnit">
       <module name="AmpsTrading.app.test" />
       <option name="PACKAGE_NAME" value="Amps" />
       <option name="MAIN_CLASS_NAME" value="Amps.AllTestsRunner" />
-      <option name="METHOD_NAME" value="" />
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="RunCukes" type="JUnit" factoryName="JUnit">
-      <module name="AmpsTrading.app.test" />
-      <option name="PACKAGE_NAME" value="Amps" />
-      <option name="MAIN_CLASS_NAME" value="Amps.RunCukes" />
       <option name="METHOD_NAME" value="" />
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
@@ -138,10 +135,6 @@
       <option name="filePath" />
       <method v="2" />
     </configuration>
-    <list>
-      <item itemvalue="JUnit.RunCukes" />
-      <item itemvalue="JUnit.AllTestsRunner" />
-    </list>
   </component>
   <component name="SharedIndexes">
     <attachedChunks>
